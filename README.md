@@ -1,87 +1,83 @@
-# LARANA Studios — E-commerce Website
+# LARANA Studios 🛍️
 
-A minimal fashion storefront inspired by the reference video, built with React + Vite, Node.js, Express, and MongoDB.
+A modern fashion e-commerce website featuring a clean storefront, horizontally sliding clothing products, product search, category filtering, and a shopping cart.
 
-## Features
-- Minimal boutique layout with centered LARANA Studios branding
-- Dark navigation bar: Home, Collections, About, Blog, Contact
-- Fashion collection with clothing product cards
-- Category filters and product search
-- Product detail modal
-- Shopping bag with quantity controls
-- Demo checkout form that saves orders through the Express API
-- Responsive layout
-- Ready for GitHub and deployment
+## ✨ Features
 
-> Portfolio/demo project only. It does not process real card payments. Product images load from Unsplash, so internet access is needed for those images.
+* Modern and responsive fashion storefront
+* Horizontally sliding product carousel
+* Product search and category filtering
+* Add-to-cart functionality
+* Checkout interface
+* React-based frontend
+* Node.js and Express backend
+* MongoDB integration for order storage
 
-## Project structure
+## 🛠️ Tech Stack
+
+**Frontend**
+
+* React
+* Vite
+* CSS
+
+**Backend**
+
+* Node.js
+* Express.js
+* MongoDB
+
+## 📁 Project Structure
+
 ```text
 larana-studios-ecommerce/
-├── client/   # React + Vite frontend
-└── server/   # Express API + MongoDB orders
+├── client/       # React frontend
+├── server/       # Express backend
+├── README.md
+└── .gitignore
 ```
 
-## Run locally
+## 🚀 Run Locally
 
-### 1. Backend
-```bash
-cd server
-npm install
-```
-Copy `server/.env.example` to `server/.env` and add your MongoDB Atlas connection string as `MONGODB_URI`. Product browsing works without MongoDB, but order saving needs a database.
+### 1. Clone the repository
 
 ```bash
-npm run dev
+git clone https://github.com/sumitkashyap3450/larana-studios-ecommerce.git
+cd larana-studios-ecommerce
 ```
-API: `http://localhost:5000`
 
-### 2. Frontend
-Open a second terminal:
+### 2. Start the frontend
+
 ```bash
 cd client
 npm install
-```
-Create `client/.env`:
-```env
-VITE_API_URL=http://localhost:5000
-```
-Then:
-```bash
 npm run dev
 ```
-Open the Vite URL, usually `http://localhost:5173`.
 
-## Push to GitHub
-From the project root:
+### 3. Start the backend
+
+Open a second terminal:
+
 ```bash
-git init
-git add .
-git commit -m "Build LARANA Studios ecommerce website"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-git push -u origin main
+cd server
+npm install
+npm start
 ```
-Create an empty repository first and replace the remote URL with your own. Do not upload `.env` files or secrets.
 
-## Deploy backend to Render
-- Create a Web Service connected to your GitHub repository.
-- Root Directory: `server`
-- Build command: `npm install`
-- Start command: `npm start`
-- Environment variables:
-  - `MONGODB_URI` = your MongoDB Atlas connection string
-  - `CLIENT_URL` = your deployed frontend URL
-  - `NODE_ENV` = `production`
+Configure the required environment variables before running the application. Use the provided `.env.example` files as references.
 
-## Deploy frontend to Netlify
-- Import the GitHub repository.
-- Base directory: `client`
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Environment variable: `VITE_API_URL` = your Render backend URL, without a trailing slash.
-- After deploying the frontend, update `CLIENT_URL` in Render to the exact Netlify URL and redeploy the backend.
+## 🌐 Deployment
 
-## Notes
-- Checkout is a demo order flow, not a real payment gateway.
-- Product images are external image URLs and may be changed to your own product photography.
+The project is deployed using Render. The frontend and backend are configured as separate services.
+
+## 🔒 Environment Variables
+
+Keep database credentials, passwords, API keys, and other secrets in environment variables. Never commit real `.env` files containing secrets to GitHub.
+
+## 👩‍💻 Project
+
+**LARANA Studios** — A fashion e-commerce project built to practise full-stack web development.
+
+---
+
+⭐ If you like this project, consider giving the repository a star!
